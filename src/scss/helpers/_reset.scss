@@ -1,0 +1,25 @@
+/*=====
+Reset
+=====*/
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html {
+    body {
+        scroll-behavior: smooth;
+        font-family: var(--english-font-family);
+    }
+}
+
+section {
+    overflow: hidden !important;
+}
+
+// loading
+.v-pulse {
+    background-color: var(--main-color) !important;
+}

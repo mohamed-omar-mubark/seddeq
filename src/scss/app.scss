@@ -1,0 +1,59 @@
+/*=====
+Sass structure
+=====*/
+
+/* Start structure
+    helpers
+        english-font
+        variables
+        reset
+    classes
+        color
+        margin
+        padding
+        text
+    elements
+        heading
+        input
+        link
+        list
+        paragraph
+    layouts
+        header
+        footer
+    pages
+        
+End Structure*/
+
+/*=====
+helpers
+=====*/
+@import "./helpers/english-font";
+@import "./helpers/variables";
+@import "./helpers/reset";
+/*=====
+classes
+=====*/
+@import "./classes/color";
+@import "./classes/margin";
+@import "./classes/padding";
+@import "./classes/text";
+/*=====
+elements
+=====*/
+@import "./elements/heading";
+@import "./elements/input";
+@import "./elements/link";
+@import "./elements/list";
+@import "./elements/paragraph";
+/*=====
+layouts
+=====*/
+@import "./layouts/header";
+@import "./layouts/footer";
+/*=====
+/*=====
+pages
+=====*/
+// page name
+// @import "./pages/page name/component name";

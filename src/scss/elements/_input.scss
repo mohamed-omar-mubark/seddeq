@@ -1,0 +1,19 @@
+/*=====
+Input
+=====*/
+input,
+input.form-control {
+    font-size: $mainFontSize;
+    
+    &:focus {
+        box-shadow: none;
+        outline: none;
+    }
+}
+
+.form-select {
+    &:focus {
+        box-shadow: none;
+        outline: none;
+    }
+}
