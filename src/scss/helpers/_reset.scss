@@ -23,3 +23,18 @@ section {
 .v-pulse {
     background-color: var(--main-color) !important;
 }
+
+// Perfect scroll
+.ps {
+    height: 100vh;
+}
+
+// offcanvas
+.offcanvas {
+    @media (max-width: 992px) {
+        width: 300px;
+    }
+    @media (max-width: 575px) {
+        width: 70%;
+    }
+}

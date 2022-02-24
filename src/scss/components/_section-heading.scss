@@ -1,0 +1,19 @@
+.section-heading {
+    text-align: center;
+
+    .title {
+        display: block;
+        font-size: $mainFontSize + 2;
+        font-weight: $mainFontWeight + 200;
+        color: var(--black-color);
+        letter-spacing: 0.5px;
+        margin-bottom: 5px;
+    }
+    
+    .description {
+        font-size: $mainFontSize - 1;
+        font-weight: $mainFontWeight;
+        color: var(--secondary-color);
+        letter-spacing: 0.5px;
+    }
+}

@@ -1,0 +1,62 @@
+.home-page {
+    .top-collection {
+        .first,
+        .second,
+        .third {
+            overflow: hidden;
+            margin-bottom: 20px;
+
+            .content {
+                position: relative;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                padding-bottom: 520px;
+                transition: all ease-out 0.5s;
+
+                a {
+                    position: absolute;
+                    bottom: 15%;
+                    left: 50%;
+                    transform: translate(-50%, -15%);
+                    display: inline-block;
+                    width: fit-content;
+                    padding: 10px 20px;
+                    background-color: #fff;
+                    color: var(--dark-color);
+                    font-size: $mainFontSize + 2;
+                    font-weight: $mainFontWeight + 200;
+
+                    &:hover {
+                        background-color: var(--blue-color);
+                        color: #fff;
+                    }
+                }
+            }
+
+            &:hover {
+                .content {
+                    transform: scale(1.05);
+                }
+            }
+        }
+
+        .first {
+            .content {
+                background-image: url("../assets/images/pages/home/top-collection/accessories.jpg");
+            }
+        }
+
+        .second {
+            .content {
+                background-image: url("../assets/images/pages/home/top-collection/women.jpg");
+            }
+        }
+
+        .third {
+            .content {
+                background-image: url("../assets/images/pages/home/top-collection/men.jpg");
+            }
+        }
+    }
+}

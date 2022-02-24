@@ -3,6 +3,11 @@ import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 
+// Vue perfect scrollbar
+import PerfectScrollbar from "vue2-perfect-scrollbar";
+import "vue2-perfect-scrollbar/dist/vue2-perfect-scrollbar.css";
+Vue.use(PerfectScrollbar);
+
 // Axios
 import axios from "axios";
 import VueAxios from "vue-axios";

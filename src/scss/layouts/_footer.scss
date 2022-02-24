@@ -1,0 +1,135 @@
+.app-footer {
+    background-color: var(--black-color);
+
+    .column {
+        margin-bottom: 30px;
+        
+        .logo {
+            margin-bottom: 20px;
+
+            a {
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                gap: 10px;
+
+                img {
+                    width: 60px;
+                    height: auto;
+                }
+
+                span {
+                    font-size: $mainFontSize + 4;
+                    font-weight: $mainFontWeight + 200;
+                    color: #fff;
+                    text-transform: uppercase;
+                }
+            }
+        }
+
+        .title {
+            margin-bottom: 20px;
+
+            span {
+                color: #fff;
+                font-size: $mainFontSize;
+                font-weight: $mainFontWeight + 200;
+                letter-spacing: 0.5px;
+            }
+        }
+
+        ul.links-list {
+            li {
+                a {
+                    display: inline-block;
+                    padding: 5px 0;
+                    font-size: $mainFontSize - 2;
+                    font-weight: $mainFontWeight;
+                    color: #fff;
+                    position: relative;
+
+                    &:hover {
+                        &::before {
+                            width: 100%;
+                        }
+                    }
+
+                    &::before {
+                        position: absolute;
+                        content: "";
+                        bottom: 0;
+                        left: 0;
+                        width: 0;
+                        height: 1px;
+                        border-radius: 2000px;
+                        background-color: #fff;
+                        transition: 0.3s;
+                    }
+                }
+            }
+        }
+
+        .email,
+        .phone,
+        .whatsapp {
+            margin-bottom: 10px;
+
+            a {
+                display: inline-flex;
+                justify-content: start;
+                align-items: center;
+                gap: 10px;
+                
+                color: #fff;
+                font-size: $mainFontSize - 2;
+                font-weight: $mainFontWeight;
+                position: relative;
+
+                &:hover {
+                    &::before {
+                        width: 100%;
+                    }
+                }
+
+                &::before {
+                    position: absolute;
+                    content: "";
+                    bottom: -4px;
+                    left: 0;
+                    width: 0;
+                    height: 1px;
+                    border-radius: 2000px;
+                    background-color: #fff;
+                    transition: 0.3s;
+                }
+            }
+        }
+    }
+
+    // to-top-btn
+    .to-top-btn {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #fff;
+        color: var(--black-color);
+        padding: 10px 12px;
+        border: none;
+        border-radius: 1px;
+        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+        
+        svg {
+            animation: scrollToTopAnimation 1s infinite alternate-reverse;
+            @keyframes scrollToTopAnimation {
+                0% {
+                    opacity: 0.2;
+                    transform: translateY(4px);
+                }
+                100% {
+                    opacity: 1;
+                    transform: translateY(-2px);
+                }
+            }
+        }
+    }
+}

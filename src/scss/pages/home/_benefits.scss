@@ -1,0 +1,40 @@
+.home-page {
+    .benefits {
+        border-top: 1px solid #ddd;
+        .benefit {
+            display: flex;
+            justify-content: start;
+            align-items: flex-start;
+            gap: 20px;
+
+            margin-bottom: 30px;
+
+            .benefit-icon {
+                font-size: $mainFontSize + 10;
+                color: var(--dark-color);
+            }
+
+            .benefit-data {
+                .title {
+                    margin-bottom: 10px;
+
+                    span {
+                        color: var(--black-color);
+                        font-size: $mainFontSize;
+                        font-weight: $mainFontWeight + 200;
+                        letter-spacing: 0.5px;
+                    }
+                }
+
+                .text {
+                    p {
+                        color: var(--secondary-color);
+                        font-size: $mainFontSize - 2;
+                        font-weight: $mainFontWeight;
+                        letter-spacing: 0.5px;
+                    }
+                }
+            }
+        }
+    }
+}

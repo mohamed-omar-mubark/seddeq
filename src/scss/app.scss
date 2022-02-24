@@ -21,8 +21,12 @@ Sass structure
     layouts
         header
         footer
+    components
+        section heading
     pages
-        
+        home
+            -- slider
+            -- top collection
 End Structure*/
 
 /*=====
@@ -53,7 +57,14 @@ layouts
 @import "./layouts/footer";
 /*=====
 /*=====
+components
+=====*/
+@import "./components/section-heading";
+/*=====
 pages
 =====*/
-// page name
-// @import "./pages/page name/component name";
+// home
+@import "./pages/home/slider";
+@import "./pages/home/top-collection";
+@import "./pages/home/products";
+@import "./pages/home/benefits";
