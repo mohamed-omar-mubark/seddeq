@@ -73,6 +73,9 @@
 
                         <ul class="links-list">
                             <li>
+                                <router-link :to="{ name: 'Shop' }">Shop</router-link>
+                            </li>
+                            <li>
                                 <router-link :to="{ name: 'Home' }">Collections</router-link>
                             </li>
                             <li>
@@ -109,7 +112,12 @@ export default {
                 toTop.style.display = "none";
             }
             
-        })
+        });
+
+        toTop.addEventListener("click", function() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        });
     }
 }
 </script>

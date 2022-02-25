@@ -1,0 +1,38 @@
+.bread-crumb {
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #ddd;
+        padding: 20px;
+        
+        @media (max-width: 575px) {
+            flex-direction: column;
+            align-items: start;
+            gap: 10px;
+        }
+
+        span {
+            font-size: $mainFontSize + 2;
+            font-weight: $mainFontWeight + 200;
+            color: var(--blue-color);
+        }
+
+        .links {
+            a {
+                font-size: $mainFontSize - 2;
+                font-weight: $mainFontWeight + 100;
+                color: #333;
+                &:hover {
+                    color: var(--blue-color);
+                }
+            }
+
+            label {
+                font-size: $mainFontSize - 2;
+                font-weight: $mainFontWeight;
+                color: #333;
+            }
+        }
+    }
+}

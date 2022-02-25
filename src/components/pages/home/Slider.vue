@@ -8,7 +8,7 @@
                         <div class="content">
                             <h2>Relaxed</h2>
                             <span>Simple and basic</span>
-                            <router-link :to="{ name: 'Home' }">Shop Now</router-link>
+                            <router-link :to="{ name: 'Shop' }">Shop Now</router-link>
                         </div>
                     </div>
                     <div class="carousel-item">
@@ -16,7 +16,7 @@
                         <div class="content">
                             <h2>Trendy</h2>
                             <span>DAILY NEW ARRIVALS</span>
-                            <router-link :to="{ name: 'Home' }">Shop Now</router-link>
+                            <router-link :to="{ name: 'Shop' }">Shop Now</router-link>
                         </div>
                     </div>
                 </div>

@@ -16,7 +16,7 @@
                         <router-link :to="{ name: 'Home' }">Home</router-link>
                     </li>
                     <li>
-                        <router-link :to="{ name: 'Home' }">Shop</router-link>
+                        <router-link :to="{ name: 'Shop' }">Shop</router-link>
                     </li>
                     <li>
                         <router-link :to="{ name: 'Home' }">Product</router-link>
@@ -33,20 +33,87 @@
             <div class="shopping">
                 <div class="wish-list" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-wish-list" aria-controls="offcanvasExample">
                     <i class="far fa-heart"></i>
-                    <span>21</span>
+                    <span>{{ wishListCount }}</span>
+                </div>
+                <!-- Offcanvas wish-list -->
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="#offcanvas-wish-list" aria-labelledby="offcanvasExampleLabel">
+                    My wish list here
                 </div>
                 <!-- Offcanvas wish-list -->
                 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas-wish-list" aria-labelledby="offcanvasExampleLabel">
-                    My wish list here
+                    <div class="title">
+                        <span>Wish list</span>
+                    </div>
+                    <div class="shopping-cart-product" v-for="item in wishList" :key="item.product.id">
+                        <div class="product-image">
+                            <img :src="'http://localhost/api/uploads/products/'+item.product.image" alt="Product Image">
+                        </div>
+                        <div class="product-data">
+                            <div class="product-name">
+                                <router-link :to="{ name: 'Home' }">{{ item.product.name }}</router-link>
+                            </div>
+                            <div class="product-price">
+                                <span>${{ item.product.price }}</span>
+                            </div>
+                        </div>
+                        <div class="product-actions">
+                            <button type="button" @click="removeProductFromWishList(item.product)">
+                                <i class="fa-solid fa-trash-can"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="empty-shopping-cart">
+                        <button type="button" @click="emptyWishList()">
+                            <i class="fa-solid fa-trash-can"></i>
+                            <span>Empty wish list</span>
+                        </button>
+                    </div>
                 </div>
 
                 <div class="shopping-cart" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-shopping-cart" aria-controls="offcanvasExample">
                     <i class="fas fa-shopping-cart"></i>
-                    <span>2</span>
+                    <span>{{ cartItemCount }}</span>
                 </div>
                 <!-- Offcanvas shopping-cart -->
                 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas-shopping-cart" aria-labelledby="offcanvasExampleLabel">
-                    My shopping cart here
+                    <div class="title">
+                        <span>Shopping cart</span>
+                    </div>
+                    <div class="shopping-cart-product" v-for="item in shoppingCart" :key="item.product.id">
+                        <div class="product-image">
+                            <img :src="'http://localhost/api/uploads/products/'+item.product.image" alt="Product Image">
+                        </div>
+                        <div class="product-data">
+                            <div class="product-name">
+                                <router-link :to="{ name: 'Home' }">{{ item.product.name }}</router-link>
+                            </div>
+                            <div class="product-price">
+                                <span>{{ item.quantity }} X ${{ item.product.price }}</span>
+                            </div>
+                        </div>
+                        <div class="product-actions">
+                            <button type="button" @click="removeProductFromShoppingCart(item.product)">
+                                <i class="fa-solid fa-trash-can"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="total">
+                        <div class="info">
+                            <label>Total: </label> <span>${{ cartTotalPrice }}</span>
+                        </div>
+                        <div class="checkout">
+                            <router-link :to="{ name: 'Shop' }">Checkout</router-link>
+                        </div>
+                    </div>
+
+                    <div class="empty-shopping-cart">
+                        <button type="button" @click="emptyShoppingCart()">
+                            <i class="fa-solid fa-trash-can"></i>
+                            <span>Empty shopping cart</span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -88,6 +155,39 @@ export default {
         let screenWidth = window.matchMedia("(max-width: 991px)");
         myFunction(screenWidth) // Call listener function at run time
         screenWidth.addListener(myFunction) // Attach listener function on state changes
+    },
+    computed: {
+        shoppingCart() {
+            return this.$store.state.shoppingCart;
+        },
+        cartTotalPrice() {
+            return this.$store.getters.cartTotalPrice;
+        },
+        cartItemCount() {
+            return this.$store.getters.cartItemCount;
+        },
+        wishList() {
+            return this.$store.state.wishList;
+        },
+        wishListCount() {
+            return this.$store.getters.wishListCount;
+        }
+    },
+    methods: {
+        removeProductFromShoppingCart(product) {
+            this.$store.dispatch('removeProductFromShoppingCart', product);
+            this.$store.dispatch('removeProductFromStorage', product);
+        },
+        emptyShoppingCart() {
+            this.$store.dispatch("emptyShoppingCart");
+        },
+        removeProductFromWishList(product) {
+            this.$store.dispatch('removeProductFromWishList', product);
+            this.$store.dispatch('removeProductFromWishListStorage', product);
+        },
+        emptyWishList() {
+            this.$store.dispatch('emptyWishList');
+        }
     }
 }
 </script>

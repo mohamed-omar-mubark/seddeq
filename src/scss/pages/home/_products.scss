@@ -1,6 +1,8 @@
 .home-page {
     .products {
         .column {
+            margin-bottom: 50px;
+
             .title {
                 margin-bottom: 20px;
 
@@ -38,6 +40,11 @@
                                 font-weight: $mainFontWeight;
                                 color: var(--secondary-color);
                                 letter-spacing: 0.5px;
+                                transition: 0.3s;
+
+                                &:hover {
+                                    color: var(--blue-color);
+                                }
                             }
                         }
                     }

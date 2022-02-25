@@ -21,7 +21,7 @@ section {
 
 // loading
 .v-pulse {
-    background-color: var(--main-color) !important;
+    background-color: var(--blue-color) !important;
 }
 
 // Perfect scroll
@@ -35,6 +35,6 @@ section {
         width: 300px;
     }
     @media (max-width: 575px) {
-        width: 70%;
+        width: 80%;
     }
 }

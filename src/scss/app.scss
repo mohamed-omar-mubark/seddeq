@@ -54,6 +54,7 @@ elements
 layouts
 =====*/
 @import "./layouts/header";
+@import "./layouts/bread-crumb";
 @import "./layouts/footer";
 /*=====
 /*=====
@@ -68,3 +69,10 @@ pages
 @import "./pages/home/top-collection";
 @import "./pages/home/products";
 @import "./pages/home/benefits";
+// shop
+@import "./pages/shop/main-shop";
+// product profile
+@import "./pages/product-profile/product-profile";
+
+// vue-snotify
+@import "../../node_modules/vue-snotify/styles/material.css";

@@ -3,6 +3,9 @@
         <!-- <perfect-scrollbar ref="scroll"> -->
             <router-view />
         <!-- </perfect-scrollbar> -->
+
+        <!-- Alerts -->
+        <vue-snotify></vue-snotify>
     </div>
 </template>
 
