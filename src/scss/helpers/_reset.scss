@@ -19,14 +19,25 @@ section {
     overflow: hidden !important;
 }
 
+// Axios progress bar
+#nprogress {
+    .bar {
+        background-color: var(--blue-color) !important;
+    }
+
+    .peg {
+        box-shadow: 0 0 10px var(--blue-color), 0 0 5px var(--blue-color) !important;
+    }
+
+    .spinner-icon {
+        border-top-color: var(--blue-color);
+        border-left-color: var(--blue-color);
+    }
+}
+
 // loading
 .v-pulse {
     background-color: var(--blue-color) !important;
-}
-
-// Perfect scroll
-.ps {
-    height: 100vh;
 }
 
 // offcanvas

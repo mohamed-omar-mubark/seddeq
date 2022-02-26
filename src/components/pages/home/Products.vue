@@ -7,83 +7,23 @@
                         <div class="title">
                             <span>New Arrivals</span>
                         </div>
-                        <div class="box">
+                        <div class="box" v-for="product in latestFourProducts" :key="product.id">
                             <div class="product-image">
-                                <router-link :to="{ name: 'Home' }">
-                                    <img src="@/assets/images/pages/home/products/col-1-img-1.jpg" alt="Product image">
+                                <router-link :to="{ name: 'ProductProfile', params: {productId: product.id} }">
+                                    <img :src="'http://localhost/api/uploads/products/'+product.image" :alt="product.name">
                                 </router-link>
                             </div>
                             <div class="product-data">
                                 <div class="product-name">
-                                    <router-link :to="{ name: 'Home' }">
-                                        <span>Camelia Reversible Jacket</span>
+                                    <router-link :to="{ name: 'ProductProfile', params: {productId: product.id} }">
+                                        <span>{{ product.name }}</span>
                                     </router-link>
                                 </div>
                                 <div class="product-price">
-                                    <span>$700.00</span>
+                                    <span>{{ product.price }}</span>
                                 </div>
                                 <div class="product-brand">
-                                    <span>Slava</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="box">
-                            <div class="product-image">
-                                <router-link :to="{ name: 'Home' }">
-                                    <img src="@/assets/images/pages/home/products/col-1-img-2.jpg" alt="Product image">
-                                </router-link>
-                            </div>
-                            <div class="product-data">
-                                <div class="product-name">
-                                    <router-link :to="{ name: 'Home' }">
-                                        <span>Camelia Reversible Jacket</span>
-                                    </router-link>
-                                </div>
-                                <div class="product-price">
-                                    <span>$700.00</span>
-                                </div>
-                                <div class="product-brand">
-                                    <span>Slava</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="box">
-                            <div class="product-image">
-                                <router-link :to="{ name: 'Home' }">
-                                    <img src="@/assets/images/pages/home/products/col-1-img-3.jpg" alt="Product image">
-                                </router-link>
-                            </div>
-                            <div class="product-data">
-                                <div class="product-name">
-                                    <router-link :to="{ name: 'Home' }">
-                                        <span>Camelia Reversible Jacket</span>
-                                    </router-link>
-                                </div>
-                                <div class="product-price">
-                                    <span>$700.00</span>
-                                </div>
-                                <div class="product-brand">
-                                    <span>Slava</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="box">
-                            <div class="product-image">
-                                <router-link :to="{ name: 'Home' }">
-                                    <img src="@/assets/images/pages/home/products/col-1-img-4.jpg" alt="Product image">
-                                </router-link>
-                            </div>
-                            <div class="product-data">
-                                <div class="product-name">
-                                    <router-link :to="{ name: 'Home' }">
-                                        <span>Camelia Reversible Jacket</span>
-                                    </router-link>
-                                </div>
-                                <div class="product-price">
-                                    <span>$700.00</span>
-                                </div>
-                                <div class="product-brand">
-                                    <span>Slava</span>
+                                    <span>{{ product.brand_name }}</span>
                                 </div>
                             </div>
                         </div>
@@ -95,83 +35,23 @@
                         <div class="title">
                             <span>Weekly Top Seller</span>
                         </div>
-                        <div class="box">
+                        <div class="box" v-for="product in latestFourProducts" :key="product.id">
                             <div class="product-image">
-                                <router-link :to="{ name: 'Home' }">
-                                    <img src="@/assets/images/pages/home/products/col-1-img-4.jpg" alt="Product image">
+                                <router-link :to="{ name: 'ProductProfile', params: {productId: product.id} }">
+                                    <img :src="'http://localhost/api/uploads/products/'+product.image" :alt="product.name">
                                 </router-link>
                             </div>
                             <div class="product-data">
                                 <div class="product-name">
-                                    <router-link :to="{ name: 'Home' }">
-                                        <span>Camelia Reversible Jacket</span>
+                                    <router-link :to="{ name: 'ProductProfile', params: {productId: product.id} }">
+                                        <span>{{ product.name }}</span>
                                     </router-link>
                                 </div>
                                 <div class="product-price">
-                                    <span>$700.00</span>
+                                    <span>{{ product.price }}</span>
                                 </div>
                                 <div class="product-brand">
-                                    <span>Slava</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="box">
-                            <div class="product-image">
-                                <router-link :to="{ name: 'Home' }">
-                                    <img src="@/assets/images/pages/home/products/col-1-img-3.jpg" alt="Product image">
-                                </router-link>
-                            </div>
-                            <div class="product-data">
-                                <div class="product-name">
-                                    <router-link :to="{ name: 'Home' }">
-                                        <span>Camelia Reversible Jacket</span>
-                                    </router-link>
-                                </div>
-                                <div class="product-price">
-                                    <span>$700.00</span>
-                                </div>
-                                <div class="product-brand">
-                                    <span>Slava</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="box">
-                            <div class="product-image">
-                                <router-link :to="{ name: 'Home' }">
-                                    <img src="@/assets/images/pages/home/products/col-1-img-2.jpg" alt="Product image">
-                                </router-link>
-                            </div>
-                            <div class="product-data">
-                                <div class="product-name">
-                                    <router-link :to="{ name: 'Home' }">
-                                        <span>Camelia Reversible Jacket</span>
-                                    </router-link>
-                                </div>
-                                <div class="product-price">
-                                    <span>$700.00</span>
-                                </div>
-                                <div class="product-brand">
-                                    <span>Slava</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="box">
-                            <div class="product-image">
-                                <router-link :to="{ name: 'Home' }">
-                                    <img src="@/assets/images/pages/home/products/col-1-img-1.jpg" alt="Product image">
-                                </router-link>
-                            </div>
-                            <div class="product-data">
-                                <div class="product-name">
-                                    <router-link :to="{ name: 'Home' }">
-                                        <span>Camelia Reversible Jacket</span>
-                                    </router-link>
-                                </div>
-                                <div class="product-price">
-                                    <span>$700.00</span>
-                                </div>
-                                <div class="product-brand">
-                                    <span>Slava</span>
+                                    <span>{{ product.brand_name }}</span>
                                 </div>
                             </div>
                         </div>
@@ -183,83 +63,23 @@
                         <div class="title">
                             <span>Best Rated</span>
                         </div>
-                        <div class="box">
+                        <div class="box" v-for="product in latestFourProducts" :key="product.id">
                             <div class="product-image">
-                                <router-link :to="{ name: 'Home' }">
-                                    <img src="@/assets/images/pages/home/products/col-1-img-1.jpg" alt="Product image">
+                                <router-link :to="{ name: 'ProductProfile', params: {productId: product.id} }">
+                                    <img :src="'http://localhost/api/uploads/products/'+product.image" :alt="product.name">
                                 </router-link>
                             </div>
                             <div class="product-data">
                                 <div class="product-name">
-                                    <router-link :to="{ name: 'Home' }">
-                                        <span>Camelia Reversible Jacket</span>
+                                    <router-link :to="{ name: 'ProductProfile', params: {productId: product.id} }">
+                                        <span>{{ product.name }}</span>
                                     </router-link>
                                 </div>
                                 <div class="product-price">
-                                    <span>$700.00</span>
+                                    <span>{{ product.price }}</span>
                                 </div>
                                 <div class="product-brand">
-                                    <span>Slava</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="box">
-                            <div class="product-image">
-                                <router-link :to="{ name: 'Home' }">
-                                    <img src="@/assets/images/pages/home/products/col-1-img-2.jpg" alt="Product image">
-                                </router-link>
-                            </div>
-                            <div class="product-data">
-                                <div class="product-name">
-                                    <router-link :to="{ name: 'Home' }">
-                                        <span>Camelia Reversible Jacket</span>
-                                    </router-link>
-                                </div>
-                                <div class="product-price">
-                                    <span>$700.00</span>
-                                </div>
-                                <div class="product-brand">
-                                    <span>Slava</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="box">
-                            <div class="product-image">
-                                <router-link :to="{ name: 'Home' }">
-                                    <img src="@/assets/images/pages/home/products/col-1-img-3.jpg" alt="Product image">
-                                </router-link>
-                            </div>
-                            <div class="product-data">
-                                <div class="product-name">
-                                    <router-link :to="{ name: 'Home' }">
-                                        <span>Camelia Reversible Jacket</span>
-                                    </router-link>
-                                </div>
-                                <div class="product-price">
-                                    <span>$700.00</span>
-                                </div>
-                                <div class="product-brand">
-                                    <span>Slava</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="box">
-                            <div class="product-image">
-                                <router-link :to="{ name: 'Home' }">
-                                    <img src="@/assets/images/pages/home/products/col-1-img-4.jpg" alt="Product image">
-                                </router-link>
-                            </div>
-                            <div class="product-data">
-                                <div class="product-name">
-                                    <router-link :to="{ name: 'Home' }">
-                                        <span>Camelia Reversible Jacket</span>
-                                    </router-link>
-                                </div>
-                                <div class="product-price">
-                                    <span>$700.00</span>
-                                </div>
-                                <div class="product-brand">
-                                    <span>Slava</span>
+                                    <span>{{ product.brand_name }}</span>
                                 </div>
                             </div>
                         </div>
@@ -271,83 +91,23 @@
                         <div class="title">
                             <span>Sale</span>
                         </div>
-                        <div class="box">
+                        <div class="box" v-for="product in latestFourProducts" :key="product.id">
                             <div class="product-image">
-                                <router-link :to="{ name: 'Home' }">
-                                    <img src="@/assets/images/pages/home/products/col-1-img-4.jpg" alt="Product image">
+                                <router-link :to="{ name: 'ProductProfile', params: {productId: product.id} }">
+                                    <img :src="'http://localhost/api/uploads/products/'+product.image" :alt="product.name">
                                 </router-link>
                             </div>
                             <div class="product-data">
                                 <div class="product-name">
-                                    <router-link :to="{ name: 'Home' }">
-                                        <span>Camelia Reversible Jacket</span>
+                                    <router-link :to="{ name: 'ProductProfile', params: {productId: product.id} }">
+                                        <span>{{ product.name }}</span>
                                     </router-link>
                                 </div>
                                 <div class="product-price">
-                                    <span>$700.00</span>
+                                    <span>{{ product.price }}</span>
                                 </div>
                                 <div class="product-brand">
-                                    <span>Slava</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="box">
-                            <div class="product-image">
-                                <router-link :to="{ name: 'Home' }">
-                                    <img src="@/assets/images/pages/home/products/col-1-img-3.jpg" alt="Product image">
-                                </router-link>
-                            </div>
-                            <div class="product-data">
-                                <div class="product-name">
-                                    <router-link :to="{ name: 'Home' }">
-                                        <span>Camelia Reversible Jacket</span>
-                                    </router-link>
-                                </div>
-                                <div class="product-price">
-                                    <span>$700.00</span>
-                                </div>
-                                <div class="product-brand">
-                                    <span>Slava</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="box">
-                            <div class="product-image">
-                                <router-link :to="{ name: 'Home' }">
-                                    <img src="@/assets/images/pages/home/products/col-1-img-2.jpg" alt="Product image">
-                                </router-link>
-                            </div>
-                            <div class="product-data">
-                                <div class="product-name">
-                                    <router-link :to="{ name: 'Home' }">
-                                        <span>Camelia Reversible Jacket</span>
-                                    </router-link>
-                                </div>
-                                <div class="product-price">
-                                    <span>$700.00</span>
-                                </div>
-                                <div class="product-brand">
-                                    <span>Slava</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="box">
-                            <div class="product-image">
-                                <router-link :to="{ name: 'Home' }">
-                                    <img src="@/assets/images/pages/home/products/col-1-img-1.jpg" alt="Product image">
-                                </router-link>
-                            </div>
-                            <div class="product-data">
-                                <div class="product-name">
-                                    <router-link :to="{ name: 'Home' }">
-                                        <span>Camelia Reversible Jacket</span>
-                                    </router-link>
-                                </div>
-                                <div class="product-price">
-                                    <span>$700.00</span>
-                                </div>
-                                <div class="product-brand">
-                                    <span>Slava</span>
+                                    <span>{{ product.brand_name }}</span>
                                 </div>
                             </div>
                         </div>
@@ -361,5 +121,21 @@
 <script>
 export default {
     name: "Products",
+    data() {
+        return {
+            // Latest four products
+            latestFourProducts: null,
+        }
+    },
+    mounted() {
+        // Get latest four products
+        this.axios.get(process.env.VUE_APP_API_URL+`product/latest_four.php`).then((response) => {
+            this.latestFourProducts = response.data.latest_products;
+            console.log(response.data.latest_products);
+        })
+        .catch((error) => {
+            console.log(error);
+        });
+    }
 }
 </script>

@@ -2,6 +2,10 @@
     <section class="all-brands p-t-50 p-b-50">
         <div class="container">
             <div class="row justify-content-center">
+                <!-- Loading spinner -->
+                <div class="spinner text-center p-t-20 p-b-20" v-if="!brands">
+                    <pulse-loader />
+                </div>
                 <div class="col-xl-10 col-lg-10 col-md-10 col-sm-12 col-12">
                     <div class="row">
                         <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-6" v-for="brand in brands" :key="brand.id">
@@ -23,6 +27,7 @@
 </template>
 
 <script>
+import PulseLoader from "vue-spinner/src/PulseLoader.vue";
 export default {
     name: "AllBrands",
     data() {
@@ -30,6 +35,9 @@ export default {
             // Brands
             brands: null,
         }
+    },
+    components: {
+        PulseLoader
     },
     mounted() {
         // Get all brands

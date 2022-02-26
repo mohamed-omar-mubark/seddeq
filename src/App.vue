@@ -1,7 +1,7 @@
 <template>
     <div id="app">
         <!-- <perfect-scrollbar ref="scroll"> -->
-            <transition @before-enter="openInTop">
+            <transition @before-enter="openInTop" mode="out-in" appear>
                 <router-view />
             </transition>
         <!-- </perfect-scrollbar> -->
@@ -21,8 +21,8 @@ export default {
     // }
     methods: {
         openInTop(){
-            document.getElementById('app').scrollIntoView();
-            $('body').css('overflow', 'auto');
+            document.getElementById("app").scrollIntoView();
+            $("body").css("overflow", "auto");
         }
     }
 }
