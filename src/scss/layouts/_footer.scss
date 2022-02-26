@@ -41,7 +41,11 @@
         ul.links-list {
             li {
                 a {
-                    display: inline-block;
+                    display: inline-flex;
+                    justify-content: start;
+                    align-items: center;
+                    gap: 10px;
+                    
                     padding: 5px 0;
                     font-size: $mainFontSize - 2;
                     font-weight: $mainFontWeight;

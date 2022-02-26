@@ -1,12 +1,112 @@
 <template>
     <div class="shop-page">
         <Header />
+        <BreadCrumb :breadcrumbData="breadcrumbData" />
         
         <div class="container p-t-50 p-b-50">
             <div class="row">
                 <!-- Sidebar -->
                 <div class="sidebar col-xl-3 col-lg-3 d-xl-block d-lg-block d-md-none">
-                    Sidebar
+                    <div class="title">
+                        <i class="fa-solid fa-filter"></i>
+                        <span>Filters</span>
+                    </div>
+
+                    <div class="filter">
+                        <div class="filter-head">
+                            <i class="fa-solid fa-filter-circle-dollar"></i>
+                            <span>By price</span>
+                        </div>
+
+                        <div class="filter-body">
+                            <ul>
+                                <li>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="default-price" checked @change="defaultPrice()">
+                                        <label class="form-check-label" for="default-price">
+                                            Default
+                                        </label>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="high-to-low-price" @change="highToLowPrice()">
+                                        <label class="form-check-label" for="high-to-low-price">
+                                            High to low
+                                        </label>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="low-to-high-price" @change="lowToHighPrice()">
+                                        <label class="form-check-label" for="low-to-high-price">
+                                            Low to high
+                                        </label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="filter">
+                        <div class="filter-head">
+                            <i class="fa-solid fa-filter"></i>
+                            <span>By category</span>
+                        </div>
+
+                        <div class="filter-body">
+                            <ul>
+                                <li>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="categoryFilter" id="category-filter" checked>
+                                        <label class="form-check-label" for="category-filter">
+                                            All
+                                        </label>
+                                    </div>
+                                </li>
+
+                                <li v-for="category in categories" :key="category.id">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="categoryFilter" :id="'category-filter'+category.id">
+                                        <label class="form-check-label" :for="'category-filter'+category.id">
+                                            {{ category.name }}
+                                        </label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="filter">
+                        <div class="filter-head">
+                            <i class="fa-solid fa-filter"></i>
+                            <span>By brand</span>
+                        </div>
+
+                        <div class="filter-body">
+                            <ul>
+                                <li>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="brandFilter" id="brand-filter" checked>
+                                        <label class="form-check-label" for="brand-filter">
+                                            All
+                                        </label>
+                                    </div>
+                                </li>
+
+                                <li v-for="brand in brands" :key="brand.id">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="brandFilter" :id="'brand-filter'+brand.id">
+                                        <label class="form-check-label" :for="'brand-filter'+brand.id">
+                                            {{ brand.name }}
+                                        </label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Main shop -->
@@ -36,7 +136,7 @@
                                 </div>
                                 <div class="product-data">
                                     <div class="product-name">
-                                        <router-link :to="{ name: 'Home' }">
+                                        <router-link :to="{ name: 'ProductProfile', params: {productId: product.id} }">
                                             <span>{{ product.name }}</span>
                                         </router-link>
                                     </div>
@@ -61,6 +161,7 @@
 <script>
 // @ is an alias to /src
 import Header from '@/components/layouts/Header';
+import BreadCrumb from '@/components/layouts/BreadCrumb';
 import Footer from '@/components/layouts/Footer';
 
 import PulseLoader from "vue-spinner/src/PulseLoader.vue";
@@ -69,11 +170,27 @@ export default {
     name: "Shop",
     data() {
         return {
+            // All products
             allProducts: null,
+
+            // Categories
+            categories: null,
+
+            // Brands
+            brands: null,
+
+            // Breadcrumb data
+            breadcrumbData: {
+                pageName: "Shop",
+                lastPage: "Home",
+                lastPageLink: "Home",
+                currentPage: "Shop",
+            },
         }
     },
     components: {
         Header,
+        BreadCrumb,
         PulseLoader,
         Footer,
     },
@@ -82,6 +199,24 @@ export default {
         this.axios.get(process.env.VUE_APP_API_URL+`product/read.php`).then((response) => {
             this.allProducts = response.data.all_products;
             console.log(response.data.all_products);
+        })
+        .catch((error) => {
+            console.log(error);
+        });
+
+        // Get all categories
+        this.axios.get(process.env.VUE_APP_API_URL+`category/read.php`).then((response) => {
+            this.categories = response.data.categories;
+            console.log(response.data.categories);
+        })
+        .catch((error) => {
+            console.log(error);
+        });
+
+        // Get all brands
+        this.axios.get(process.env.VUE_APP_API_URL+`brand/read.php`).then((response) => {
+            this.brands = response.data.brands;
+            console.log(response.data.brands);
         })
         .catch((error) => {
             console.log(error);
@@ -102,6 +237,29 @@ export default {
             });
             // Message
             this.$snotify.success("Added to wish list");
+        },
+
+        // Filters
+        defaultPrice() {
+            if(document.querySelector('input[id="default-price"]:checked').value === 'on') {
+                this.allProducts.sort(function(a, b) {
+                    return parseFloat(b.id) - parseFloat(a.id);
+                });
+            }
+        },
+        highToLowPrice() {
+            if(document.querySelector('input[id="high-to-low-price"]:checked').value === 'on') {
+                this.allProducts.sort(function(a, b) {
+                    return parseFloat(b.price) - parseFloat(a.price);
+                });
+            }
+        },
+        lowToHighPrice() {
+            if(document.querySelector('input[id="low-to-high-price"]:checked').value === 'on') {
+                this.allProducts.sort(function(a, b) {
+                    return parseFloat(a.price) - parseFloat(b.price);
+                });
+            }
         }
     }
 };

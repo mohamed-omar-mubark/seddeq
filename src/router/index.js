@@ -3,6 +3,8 @@ import VueRouter from "vue-router";
 import Home from "@/views/Home";
 import Shop from "@/views/Shop";
 import ProductProfile from "@/views/ProductProfile";
+import Categories from "@/views/Categories";
+import Brands from "@/views/Brands";
 
 Vue.use(VueRouter);
 
@@ -21,6 +23,16 @@ const routes = [
         path: "/product/:productId",
         name: "ProductProfile",
         component: ProductProfile,
+    },
+    {
+        path: "/categories",
+        name: "Categories",
+        component: Categories,
+    },
+    {
+        path: "/brands",
+        name: "Brands",
+        component: Brands,
     },
 ];
 

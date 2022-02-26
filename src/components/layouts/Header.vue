@@ -19,10 +19,10 @@
                         <router-link :to="{ name: 'Shop' }">Shop</router-link>
                     </li>
                     <li>
-                        <router-link :to="{ name: 'Home' }">Product</router-link>
+                        <router-link :to="{ name: 'Categories' }">Categories</router-link>
                     </li>
                     <li>
-                        <router-link :to="{ name: 'Home' }">Sale</router-link>
+                        <router-link :to="{ name: 'Brands' }">Brands</router-link>
                     </li>
                     <li>
                         <router-link :to="{ name: 'Home' }">Blog</router-link>

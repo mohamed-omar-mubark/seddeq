@@ -24,28 +24,35 @@
                                 <span>+201559660633</span>
                             </a>
                         </div>
-
-                        <div class="whatsapp">
-                            <a href="https://wa.me/201559660633" target="_blank">
-                                <i class="fa-brands fa-whatsapp"></i>
-                                <span>Whatsapp</span>
-                            </a>
-                        </div>
                     </div>
                 </div>
 
                 <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
                     <div class="column">
                         <div class="title">
-                            <span>Categories</span>
+                            <span>Social media</span>
                         </div>
 
                         <ul class="links-list">
                             <li>
-                                <router-link :to="{ name: 'Home' }">Mens</router-link>
+                                <a href="https://facebook.com/SeddeqStore/" target="_blank">
+                                <i class="fa-brands fa-facebook-f"></i>
+                                    <span>Facebook</span>
+                                </a>
                             </li>
+
                             <li>
-                                <router-link :to="{ name: 'Home' }">Womens</router-link>
+                                <a href="https://www.instagram.com/seddeqstore/" target="_blank">
+                                <i class="fa-brands fa-instagram"></i>
+                                    <span>Instagram</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="https://wa.me/201559660633" target="_blank">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                    <span>Whatsapp</span>
+                                </a>
                             </li>
                         </ul>
                     </div>
@@ -76,10 +83,10 @@
                                 <router-link :to="{ name: 'Shop' }">Shop</router-link>
                             </li>
                             <li>
-                                <router-link :to="{ name: 'Home' }">Collections</router-link>
+                                <router-link :to="{ name: 'Categories' }">Categories</router-link>
                             </li>
                             <li>
-                                <router-link :to="{ name: 'Home' }">Brands</router-link>
+                                <router-link :to="{ name: 'Brands' }">Brands</router-link>
                             </li>
                         </ul>
                     </div>

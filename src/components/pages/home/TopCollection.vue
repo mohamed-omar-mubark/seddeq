@@ -9,17 +9,17 @@
             <div class="row">
                 <div class="first col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
                     <div class="content">
-                        <router-link :to="{ name: 'Home' }">Accessories</router-link>
+                        <router-link :to="{ name: 'Shop' }">Accessories</router-link>
                     </div>
                 </div>
                 <div class="second col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
                     <div class="content">
-                        <router-link :to="{ name: 'Home' }">Women</router-link>
+                        <router-link :to="{ name: 'Categories' }">Women</router-link>
                     </div>
                 </div>
                 <div class="third col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
                     <div class="content">
-                        <router-link :to="{ name: 'Home' }">Men</router-link>
+                        <router-link :to="{ name: 'Categories' }">Men</router-link>
                     </div>
                 </div>
             </div>

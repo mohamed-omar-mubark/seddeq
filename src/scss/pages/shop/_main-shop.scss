@@ -1,6 +1,62 @@
 .shop-page {
     .sidebar {
-        background-color: #f9f9f9;
+        padding: 20px;
+        border: 1px solid #ddd;
+
+        .title {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            gap: 10px;
+
+            color: var(--blue-color);
+            font-size: $mainFontSize + 2;
+            font-weight: $mainFontWeight + 200;
+            border-bottom: 1px solid #ddd;
+            padding: 0 0 10px;
+        }
+
+        .filter {
+            padding: 20px 0 0;
+
+            .filter-head {
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                gap: 10px;
+                color: var(--secondary-color);
+                font-size: $mainFontSize - 2;
+                font-weight: $mainFontWeight;
+
+                span {
+                    color: var(--dark-color);
+                }
+            }
+
+            .filter-body {
+                padding: 20px 0;
+
+                .form-check {
+                    margin-bottom: 10px;
+
+                    .form-check-input {
+                        cursor: pointer;
+
+                        &:checked {
+                            background-color: var(--blue-color);
+                            border: none;
+                            box-shadow: none;
+                        }
+                    }
+
+                    .form-check-label {
+                        cursor: pointer;
+                        font-size: $mainFontSize - 2;
+                        font-weight: $mainFontWeight;
+                    }
+                }
+            }
+        }
     }
 
     .main-shop {

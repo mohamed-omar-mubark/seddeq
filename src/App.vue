@@ -1,7 +1,9 @@
 <template>
     <div id="app">
         <!-- <perfect-scrollbar ref="scroll"> -->
-            <router-view />
+            <transition @before-enter="openInTop">
+                <router-view />
+            </transition>
         <!-- </perfect-scrollbar> -->
 
         <!-- Alerts -->
@@ -10,11 +12,18 @@
 </template>
 
 <script>
+import $ from "jquery";
 export default {
     // watch: {
     //     $route() {
     //         this.$refs.scroll.$el.scrollTop = 0;
     //     }
     // }
+    methods: {
+        openInTop(){
+            document.getElementById('app').scrollIntoView();
+            $('body').css('overflow', 'auto');
+        }
+    }
 }
 </script>
