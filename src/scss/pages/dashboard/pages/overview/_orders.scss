@@ -1,0 +1,59 @@
+.dashboard-page {
+    .main-content {
+        .latest-orders {
+            padding: 0 40px;
+
+            .title {
+                margin-bottom: 20px;
+
+                span {
+                    font-size: $mainFontSize -4;
+                    font-weight: $mainFontWeight + 100;
+                    color: var(--blue-color);
+                }
+            }
+
+            .table {
+                background-color: #fff;
+                border-radius: 4px;
+                box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+
+                thead {
+                    tr {
+                        th {
+                            font-size: $mainFontSize - 1;
+                            font-weight: $mainFontWeight + 100;
+                            color: var(--dark-color);
+                            padding: 10px ;
+                        }
+                    }
+                }
+
+                tbody {
+                    td {
+                        font-size: $mainFontSize - 2;
+                        font-weight: $mainFontWeight;
+                        color: var(--dark-color);
+                        padding: 10px;
+
+                        button {
+                            display: inline-block;
+                            border: none;
+                            border-radius: 8px;
+                            background-color: #fff;
+                            padding: 10px 15px;
+                            color: var(--blue-color);
+                            font-size: $mainFontSize + 2;
+                            box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+                            transition: 0.3s;
+                            
+                            &:hover {
+                                transform: translateY(-2px);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

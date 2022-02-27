@@ -56,11 +56,16 @@ layouts
 @import "./layouts/header";
 @import "./layouts/bread-crumb";
 @import "./layouts/footer";
+// dashboard layouts
+@import "./pages/dashboard/layouts/dashboard-header";
+@import "./pages/dashboard/layouts/dashboard-sidebar";
 /*=====
 /*=====
 components
 =====*/
 @import "./components/section-heading";
+// dashboard components
+@import "./pages/dashboard/components/dashboard-section-heading";
 /*=====
 pages
 =====*/
@@ -77,6 +82,14 @@ pages
 @import "./pages/brands/all-brands";
 // categories
 @import "./pages/categories/all-categories";
+/*=====
+dashboard pages
+=====*/
+// dashboard
+@import "./pages/dashboard/dashboard";
+// dashboard over view
+@import "./pages/dashboard/pages/overview/statistics";
+@import "./pages/dashboard/pages/overview/orders";
 
 // vue-snotify
 @import "../../node_modules/vue-snotify/styles/material.css";

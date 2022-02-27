@@ -1,0 +1,120 @@
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 40px 20px 20px;
+    background-color: #fff;
+    box-shadow: 0px 10px 20px 0px #12263F09;
+
+
+    .search {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 20px;
+
+        // padding-left: 20px;
+
+        .bars {
+            font-size: $mainFontSize + 2;
+            color: #555B6D;
+            cursor: pointer;
+            transition: 0.3s;
+
+            &:hover {
+                color: var(--blue-color);
+            }
+        }
+
+        .form-group {
+            padding: 0;
+            position: relative;
+
+            input.form-control {
+                width: 314px;
+                padding: 10px 10px 10px 40px;
+                background-color: #F4F5F9;
+                border: none;
+                border-radius: 10px;
+                font-size: $mainFontSize - 4;
+                font-weight: $mainFontWeight;
+            }
+
+            .icon {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 10px;
+                font-size: $mainFontSize - 2;
+                color: #74788D;
+            }
+        }
+    }
+
+    // User part
+    .user-part {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        gap: 30px;
+
+        .notifications {
+            .icon {
+                color: #CACCCF;
+                font-size: $mainFontSize + 4;
+                position: relative;
+
+                svg {
+                    transform: rotate(20deg);
+                }
+
+                span {
+                    position: absolute;
+                    top: -5px;
+                    left: 8px;
+                    padding: 1px 6px;
+                    font-size: $mainFontSize - 6;
+                    color: #fff;
+                    border-radius: 2000px;
+                    background-color: #FF6760;
+                    border: 1px solid #F6F8FB;
+                }
+            }
+        }
+
+        .user-profile {
+            .user-avatar {
+                img {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    border: 1px solid #E8E8E8;
+                }
+            }
+        }
+    }
+}
+
+// sticky-header
+.sticky-dashboard-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-left: 297px;
+    background-color: #fff;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    animation: stickyHeader 1s;
+    @keyframes stickyHeader {
+        0% {
+            transform: translateY(-100%);
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}

@@ -1,0 +1,105 @@
+.dashboard-page {
+    .main {
+        padding: 0;
+        margin: 0;
+        --bs-gutter-x: 0;
+
+        .sidebar-container {
+            position: relative;
+            
+            .dashboard-sidebar {
+                position: fixed;
+                width: 277px;
+                height: 100vh;
+                z-index: 999;
+                overflow-y: auto;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+                transition: transform 0.2s, left 0.2s;
+                border: 1px solid #ddd;
+                background-color: #fff;
+
+                .logo {
+                    display: flex;
+                    justify-content: start;
+                    align-items: center;
+                    gap: 10px;
+
+                    padding: 16px;
+
+                    img {
+                        width: 60px;
+                        height: auto;
+                    }
+
+                    span {
+                        font-size: $mainFontSize + 2;
+                        font-weight: $mainFontWeight + 200;
+                        color: var(--black-color);
+                    }
+                }
+
+                .main-menu {
+                    padding-top: 30px;
+
+                    .main-list {
+                        li {
+                            padding: 0 20px;
+                            margin-bottom: 10px;
+                            &.active {
+                                border-left: 3px solid var(--dark-blue-color);
+
+                                a {
+                                    background-color: var(--dark-blue-color);
+                                    color: #fff;
+
+                                    span {
+                                        font-weight: $mainFontWeight + 100;
+                                    }
+                                }
+                            }
+
+                            &:not(.active) {
+                                &:hover {
+                                    a {
+                                        background-color: var(--dark-blue-color);
+                                        color: #fff;
+                                    }
+                                }
+                            }
+
+                            a {
+                                display: flex;
+                                justify-content: start;
+                                align-items: center;
+                                gap: 10px;
+
+                                color: #414141;
+                                border-radius: 8px;
+                                padding: 18px;
+
+                                font-size: $mainFontSize + 4;
+
+                                span {
+                                    font-size: $mainFontSize - 2;
+                                    font-weight: $mainFontWeight;
+                                }
+                            }
+                        }
+                    }
+
+                    .list-title {
+                        padding: 20px 40px;
+
+                        span {
+                            font-size: $mainFontSize - 2;
+                            font-weight: $mainFontWeight;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

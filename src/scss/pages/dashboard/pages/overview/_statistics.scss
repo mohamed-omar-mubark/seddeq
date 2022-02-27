@@ -1,0 +1,63 @@
+.dashboard-page {
+    .main-content {
+        .statistics {
+            padding: 40px;
+
+            .boxs {
+                .box {
+                    display: flex;
+                    justify-content: start;
+                    align-items: center;
+                    gap: 24px;
+
+                    padding: 28px;
+                    border-radius: 12px;
+                    background-color: #fff;
+                    margin-bottom: 20px;
+
+                    .icon {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        background-color: #E4E4FF;
+                        color: #8480FE;
+                        padding: 24px;
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+                    }
+                    .icon-2 {
+                        background-color: #D8F7E7;
+                        color: #42D889;
+                    }
+                    .icon-3 {
+                        background-color: #FDF2D6;
+                        color: #FEC53C;
+                    }
+                    .icon-4 {
+                        background-color: #FFDDD1;
+                        color: #FE9D7A;
+                    }
+
+                    .content {
+                        .number {
+                            span {
+                                font-size: $mainFontSize + 18;
+                                font-weight: $mainFontWeight + 100;
+                            }
+                        }
+
+                        .text {
+                            span {
+                                font-size: $mainFontSize;
+                                font-weight: $mainFontWeight + 100;
+                                color: #808080;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

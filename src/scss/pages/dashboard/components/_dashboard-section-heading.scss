@@ -1,0 +1,9 @@
+.dashboard-section-heading {
+    margin-bottom: 20px;
+    
+    span.title {
+        font-size: $mainFontSize + 24;
+        font-weight: $mainFontWeight + 100;
+        color: var(--dark-blue-color);
+    }
+}
