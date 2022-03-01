@@ -9,10 +9,10 @@
 
 <script>
 // @ is an alias to /src
-import Header from '@/components/layouts/Header';
-import BreadCrumb from '@/components/layouts/BreadCrumb';
-import AllBrands from '@/components/pages/brands/AllBrands';
-import Footer from '@/components/layouts/Footer';
+import Header from '@/components/public/layouts/Header';
+import BreadCrumb from '@/components/public/layouts/BreadCrumb';
+import AllBrands from '@/components/public/pages/brands/AllBrands';
+import Footer from '@/components/public/layouts/Footer';
 
 export default {
     name: "Brands",

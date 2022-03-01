@@ -32,7 +32,7 @@
 
 <script>
 export default {
-    name: "DashboardHeader",
+    name: "Header",
     mounted() {
         // Sticky header in scroll
         let header = document.getElementById("dashboard-haeder");

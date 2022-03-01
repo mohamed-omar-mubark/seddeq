@@ -6,8 +6,8 @@
 </template>
 
 <script>
-import Statistics from "../components/overview/Statistics";
-import Orders from "../components/overview/Orders";
+import Statistics from "@/components/admin/pages/overview/Statistics";
+import Orders from "@/components/admin/pages/overview/Orders";
 export default {
     name: "Overview",
     components: {

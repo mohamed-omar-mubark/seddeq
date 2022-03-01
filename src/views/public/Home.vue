@@ -11,12 +11,12 @@
 
 <script>
 // @ is an alias to /src
-import Header from '@/components/layouts/Header';
-import Slider from '@/components/pages/home/Slider';
-import TopCollection from '@/components/pages/home/TopCollection';
-import Products from '@/components/pages/home/Products';
-import Benefits from '@/components/pages/home/Benefits';
-import Footer from '@/components/layouts/Footer';
+import Header from '@/components/public/layouts/Header';
+import Slider from '@/components/public/pages/home/Slider';
+import TopCollection from '@/components/public/pages/home/TopCollection';
+import Products from '@/components/public/pages/home/Products';
+import Benefits from '@/components/public/pages/home/Benefits';
+import Footer from '@/components/public/layouts/Footer';
 
 export default {
     name: "Home",

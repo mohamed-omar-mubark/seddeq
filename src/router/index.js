@@ -2,20 +2,20 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 // Views
 // home page
-import Home from "@/views/Home";
+import Home from "@/views/public/Home";
 // shop page
-import Shop from "@/views/Shop";
+import Shop from "@/views/public/Shop";
 // products profile page
-import ProductProfile from "@/views/ProductProfile";
+import ProductProfile from "@/views/public/ProductProfile";
 // categories page
-import Categories from "@/views/Categories";
+import Categories from "@/views/public/Categories";
 // brands page
-import Brands from "@/views/Brands";
+import Brands from "@/views/public/Brands";
 
-// Dashboard
-import Dashboard from "@/views/dashboard/Dashboard";
+// Admin dashboard
+import Dashboard from "@/views/admin/Dashboard";
     // Dashboard Overview
-    import Overview from "@/components/pages/dashboard/pages/Overview.vue";
+    import Overview from "@/views/admin/childs/Overview.vue";
 
 Vue.use(VueRouter);
 
