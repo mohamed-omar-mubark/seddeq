@@ -53,43 +53,43 @@ elements
 /*=====
 layouts
 =====*/
-@import "./layouts/header";
-@import "./layouts/bread-crumb";
-@import "./layouts/footer";
+@import "./public/layouts/header";
+@import "./public/layouts/bread-crumb";
+@import "./public/layouts/footer";
 // dashboard layouts
-@import "./pages/dashboard/layouts/dashboard-header";
-@import "./pages/dashboard/layouts/dashboard-sidebar";
+@import "./admin/layouts/dashboard-header";
+@import "./admin/layouts/dashboard-sidebar";
 /*=====
 /*=====
 components
 =====*/
-@import "./components/section-heading";
+@import "./components/public/section-heading";
 // dashboard components
-@import "./pages/dashboard/components/dashboard-section-heading";
+@import "./components/admin/dashboard-section-heading";
 /*=====
 pages
 =====*/
 // home
-@import "./pages/home/slider";
-@import "./pages/home/top-collection";
-@import "./pages/home/products";
-@import "./pages/home/benefits";
+@import "./public/pages/home/slider";
+@import "./public/pages/home/top-collection";
+@import "./public/pages/home/products";
+@import "./public/pages/home/benefits";
 // shop
-@import "./pages/shop/main-shop";
+@import "./public/pages/shop/main-shop";
 // product profile
-@import "./pages/product-profile/product-profile";
+@import "./public/pages/product-profile/product-profile";
 // brands
-@import "./pages/brands/all-brands";
+@import "./public/pages/brands/all-brands";
 // categories
-@import "./pages/categories/all-categories";
+@import "./public/pages/categories/all-categories";
 /*=====
 dashboard pages
 =====*/
 // dashboard
-@import "./pages/dashboard/dashboard";
+@import "./admin/pages/dashboard";
 // dashboard over view
-@import "./pages/dashboard/pages/overview/statistics";
-@import "./pages/dashboard/pages/overview/orders";
+@import "./admin/pages/overview/statistics";
+@import "./admin/pages/overview/orders";
 
 // vue-snotify
 @import "../../node_modules/vue-snotify/styles/material.css";
