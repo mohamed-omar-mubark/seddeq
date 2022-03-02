@@ -111,23 +111,32 @@
                     </tr>
                 </tbody>
             </table>
+            <!-- Loading spinner -->
+            <div class="spinner text-center p-t-20 p-b-20" v-if="!orders">
+                <pulse-loader />
+            </div>
         </div>
     </section>
 </template>
 
 <script>
+import PulseLoader from "vue-spinner/src/PulseLoader.vue";
 export default {
     name: "Orders",
     data() {
         return {
+            // Order Array
             orders: null,
         }
+    },
+    components: {
+        PulseLoader
     },
     mounted() {
         // Get all orders
         this.axios.get(process.env.VUE_APP_API_URL+`order/read.php`).then((response) => {
             this.orders = response.data.orders;
-            console.log(response.data.orders);
+            this.$store.state.dashboardOverview.orders = response.data.orders.length;
         })
         .catch((error) => {
             console.log(error);

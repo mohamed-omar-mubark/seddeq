@@ -32,7 +32,7 @@
 
                         <div class="content">
                             <div class="number">
-                                <span>280</span>
+                                <span>{{ ordersCount }}</span>
                             </div>
 
                             <div class="text">
@@ -85,5 +85,10 @@
 <script>
 export default {
     name: "Statistics",
+    computed: {
+        ordersCount() {
+            return this.$store.state.dashboardOverview.orders;
+        }
+    }
 }
 </script>

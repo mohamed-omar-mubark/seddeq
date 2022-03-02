@@ -20,4 +20,12 @@ export default {
     userData: [],
 
     uploading: "",
+
+    // Dashboard overview statistics
+    dashboardOverview: {
+        products: null,
+        orders: null,
+        categories: null,
+        brands: null
+    }
 }
