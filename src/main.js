@@ -3,44 +3,35 @@ import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 
-// Vue perfect scrollbar
-import PerfectScrollbar from "vue2-perfect-scrollbar";
-import "vue2-perfect-scrollbar/dist/vue2-perfect-scrollbar.css";
-Vue.use(PerfectScrollbar);
+// bootstrap
+import "bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
 
-// Axios
+// axios
 import axios from "axios";
 import VueAxios from "vue-axios";
 Vue.use(VueAxios, axios);
 
-// Axios progress bar
+// axios progress bar
 import "axios-progress-bar/dist/nprogress.css";
 import { loadProgressBar } from "axios-progress-bar";
 loadProgressBar();
 
-// Snotify Alerts
+// snotify alerts
 import Snotify from "vue-snotify";
 Vue.use(Snotify);
 
-// Bootstrap
-import "bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
-
-// Bootstrap vue
-import { BootstrapVue } from "bootstrap-vue";
-Vue.use(BootstrapVue);
-
-// Jquery
+// jquery
 import "jquery";
 import "jquery/dist/jquery";
 
-// Font Awesome
+// font awesome
 import "@fortawesome/fontawesome-free/js/all";
 
-// Normalize
+// normalize
 import "normalize.css";
 
-// Scss
+// scss
 import "./scss/app.scss";
 
 Vue.config.productionTip = false;
