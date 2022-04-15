@@ -27,3 +27,25 @@ export default {
     },
 };
 </script>
+
+<style lang="scss" scoped>
+.dashboard-page {
+    min-height: 100vh;
+    background-color: var(--gray-background);
+
+    .main {
+        padding: 0;
+        margin: 0;
+        --bs-gutter-x: 0;
+
+        .sidebar-container {
+            position: relative;
+        }
+
+        .main-content {
+            margin-left: 277px;
+            width: calc(100% - 277px);
+        }
+    }
+}
+</style>

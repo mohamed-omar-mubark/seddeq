@@ -58,11 +58,13 @@ layouts
 @import "./public/layouts/footer";
 // dashboard layouts
 @import "./admin/layouts/dashboard-header";
-@import "./admin/layouts/dashboard-sidebar";
 /*=====
 /*=====
 components
 =====*/
+// global
+@import "./components/global/form";
+// public
 @import "./components/public/section-heading";
 // dashboard components
 @import "./components/admin/dashboard-section-heading";
@@ -85,8 +87,6 @@ pages
 /*=====
 dashboard pages
 =====*/
-// dashboard
-@import "./admin/pages/dashboard";
 // dashboard over view
 @import "./admin/pages/overview/statistics";
 @import "./admin/pages/overview/orders";

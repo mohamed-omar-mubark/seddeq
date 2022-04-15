@@ -1,0 +1,76 @@
+.primary-form {
+    .form-group {
+        margin-bottom: 32px;
+
+        label.input-name {
+            font-size: $mainFontSize - 2;
+            font-weight: $mainFontWeight + 100;
+            color: var(--dark-color);
+            margin-bottom: 13px;
+        }
+
+        input.form-control {
+            padding: 20px;
+            border-radius: 18px;
+            border: 1px solid #d5d9e0;
+            font-size: $mainFontSize - 2;
+            color: var(--secondary-color);
+
+            &::placeholder {
+                font-size: $mainFontSize - 4;
+                color: var(--secondary-color);
+            }
+        }
+
+        label.image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+
+            height: 140px;
+            background-color: #fff;
+            border: 1px dashed #AAAAAA;
+            border-radius: 18px;
+            font-size: $mainFontSize - 2;
+            font-weight: $mainFontWeight;
+            color: var(--dark-color);
+            cursor: pointer;
+        }
+
+        &.actions {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            gap: 20px;
+
+            margin-top: 12px;
+
+            button.form-cancel-btn,
+            button.form-submit-btn {
+                display: inline-block;
+                border: none;
+                border-radius: 18px;
+                padding: 16px 65px;
+                font-size: $mainFontSize + 2;
+                font-weight: $mainFontWeight + 100;
+                transition: 0.3s;
+
+                &:hover {
+                    transform: translateY(-2px);
+                }
+            }
+
+            button.form-cancel-btn {
+                background-color: #fff;
+                border: 1px solid #D5D5D5;
+                color: var(--dark-blue-color);
+            }
+
+            button.form-submit-btn {
+                background-color: var(--dark-blue-color);
+                color: #fff;
+            }
+        }
+    }
+}

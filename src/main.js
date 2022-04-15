@@ -26,6 +26,10 @@ Vue.use(Snotify);
 import "bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
+// Bootstrap vue
+import { BootstrapVue } from "bootstrap-vue";
+Vue.use(BootstrapVue);
+
 // Jquery
 import "jquery";
 import "jquery/dist/jquery";

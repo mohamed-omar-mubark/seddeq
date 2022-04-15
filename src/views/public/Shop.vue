@@ -197,8 +197,8 @@ export default {
     mounted() {
         // Get all products
         this.axios.get(process.env.VUE_APP_API_URL+`product/read.php`).then((response) => {
-            this.allProducts = response.data.all_products;
-            console.log(response.data.all_products);
+            this.allProducts = response.data.products;
+            console.log(response.data.products);
         })
         .catch((error) => {
             console.log(error);

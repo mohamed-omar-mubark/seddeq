@@ -14,8 +14,10 @@ import Brands from "@/views/public/Brands";
 
 // Admin dashboard
 import Dashboard from "@/views/admin/Dashboard";
-    // Dashboard Overview
-    import Overview from "@/views/admin/childs/Overview.vue";
+    // Dashboard overview
+    import Overview from "@/views/admin/childs/Overview";
+    // Dashboard products
+    import Products from "@/views/admin/childs/Products";
 
 Vue.use(VueRouter);
 
@@ -54,6 +56,11 @@ const routes = [
                 path: "",
                 name: "Overview",
                 component: Overview,
+            },
+            {
+                path: "/products",
+                name: "Products",
+                component: Products,
             },
         ]
     },
